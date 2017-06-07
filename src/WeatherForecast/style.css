@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .weather-forecast .day {
@@ -21,10 +22,26 @@
     height: 200px;
 }
 
+.weather-forecast .hour-weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    height: 154px;
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+.weather-forecast .weather-icon {
+    width: 80px;
+    height: auto;
+}
+
 .weather-forecast .day .date {
     position: absolute;
     top: 5px;
-    right: 5px;
+    left: 5px;
 }
 
 .weather-forecast .day .city {

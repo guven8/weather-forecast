@@ -1,10 +1,17 @@
 import * as t from './actionTypes';
 
-export default (state = {}, action) => {
+const initialState = {
+  forecast: null,
+  city: null
+}
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case t.STORE_WEATHER_FORECAST:
       return {
-        ...action.weatherForecast
+        ...state,
+        forecast: action.forecast,
+        city: action.city
       }
     default:
       return state;
